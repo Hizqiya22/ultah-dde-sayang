@@ -1,0 +1,101 @@
+<!doctype html> 
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Kartu Ulang Tahun</title>
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: url('f1.jpg') no-repeat center center;
+      background-size: cover;         
+      background-attachment: scroll;  
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+    }
+    .card{
+      background: rgba(255,255,255,0.4); /* transparan lebih ringan */
+      border: 2px solid #fff;            /* garis tipis biar elegan */
+      border-radius:18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      max-width:500px;
+      width:90%;              
+      padding:20px;
+      text-align:center;
+      animation: fadeIn 1.5s ease;
+      position: relative;
+      color:#fff; /* teks putih agar kontras dengan gambar */
+    }
+    .card::before, .card::after{
+      content:"🌸";
+      position:absolute;
+      font-size:32px;
+      opacity:0.9;
+      animation: float 4s ease-in-out infinite;
+    }
+    .card::before{ top:8px; left:8px; }
+    .card::after{ bottom:8px; right:8px; }
+
+    h1{
+      color:#ffebf7;
+      font-size:26px;
+      margin-bottom:10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* agar lebih jelas */
+    }
+    p{
+      color:#fff;
+      line-height:1.6;
+      margin:15px 0;
+      font-size:16px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+    .btn{
+      display:inline-block;
+      margin-top:20px;
+      padding:12px 20px;
+      border-radius:30px;
+      background:linear-gradient(45deg,#ff6fb1,#6fa8ff);
+      color:#fff;
+      font-weight:bold;
+      text-decoration:none;
+      transition:0.3s;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    }
+    .btn:hover{
+      opacity:0.9;
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn{
+      from{opacity:0; transform:translateY(20px);}
+      to{opacity:1; transform:translateY(0);}
+    }
+    @keyframes float{
+      0%,100%{ transform: translateY(0) rotate(0deg);}
+      50%{ transform: translateY(-8px) rotate(10deg);}
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Musik dengan tombol play -->
+<audio id="bgMusic" loop>
+  <source src="c.mp4" type="audio/mpeg">
+  Browser kamu tidak mendukung audio.
+</audio>
+
+<button class="btn" onclick="document.getElementById('bgMusic').play()">🎵 Putar Musik</button>
+
+  <div class="card">
+    <h1>💖 Happy Birthday dde sayang 🎈🎁🎊🎉<h1>  
+    <p>Selamat ulang tahun yang ke-21 dde Vina ❤️ 🌸<br>
+    Semoga selalu sehat, bahagia, dan hidupmu penuh cinta serta berkah.  
+    Aku ingin selalu menjadi alasan senyummu dan rumah ternyamanmu. 💕</p>
+    <a href="love.html" class="btn">Klik Selanjutnya ❤️</a>
+  </div>
+
+</body>
+</html>
